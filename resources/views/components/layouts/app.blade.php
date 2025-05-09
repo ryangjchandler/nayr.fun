@@ -17,7 +17,15 @@
         'resources/js/app.js',
     ])
 </head>
-<body {{ $attributes->class('bg-neutral-950 antialiased min-h-screen w-screen flex flex-col') }}>
-    {{ $slot }}
+<body {{ $attributes->class('bg-neutral-950 antialiased min-h-screen w-screen flex flex-col px-10 text-neutral-50 text-sm tracking-tight py-10') }}>
+    <header class="flex flex-col gap-y-1.5">
+        <a href="{{ route('index') }}" class="font-bold">
+            ryan's fun stuff
+        </a>
+
+        <p>a collection of random programming experiments</p>
+    </header>
+
+    <main class="flex-1 mt-10">{{ $slot }}</main>
 </body>
 </html>
